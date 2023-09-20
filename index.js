@@ -27,13 +27,20 @@ class BankAccount {
   const switcher = document.querySelector("select");
   const amountInput = document.querySelector("input[name='amount']");
   const balanceOutput = document.querySelector("span[id='balance']");
+
+  const updateBalanceDisplay = () => {
+    const balanceAmount = document.querySelector("#balanceAmount");
+    balanceAmount.textContent = account.checkBalance();
+  };  
   
   const depositButton = document.querySelector("#depositButton");
   depositButton.style.display = "inline";
   depositButton.addEventListener("click", () => {
     try {
       account.deposit(Number(amountInput.value));
-      balanceOutput.textContent = account.checkBalance();
+      updateBalanceDisplay(); // Actualizar el saldo al depositar
+      //balanceOutput.textContent = account.checkBalance();
+      amountInput.value = ""; // Limpiar el campo de entrada
     } catch (error) {
       alert(error.message);
     }
@@ -43,7 +50,9 @@ class BankAccount {
   withdrawButton.addEventListener("click", () => {
     try {
       account.withdraw(Number(amountInput.value));
-      balanceOutput.textContent = account.checkBalance();
+      updateBalanceDisplay();
+      //balanceOutput.textContent = account.checkBalance();
+      amountInput.value = "";
     } catch (error) {
       alert(error.message);
     }
@@ -51,7 +60,9 @@ class BankAccount {
   
   const checkBalanceButton = document.querySelector("#checkBalanceButton");
   checkBalanceButton.addEventListener("click", () => {
-    balanceOutput.textContent = account.checkBalance();
+    updateBalanceDisplay();
+    //balanceOutput.textContent = account.checkBalance();
+    amountInput.value = "";
   });
   
   switcher.addEventListener("change", () => {

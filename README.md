@@ -20,19 +20,21 @@ I used switch statements to handle the different actions that the user can perfo
 
 For example, the following switch statement is used to determine which action the user wants to perform:
 
+```
 const action = switcher.options[switcher.selectedIndex].value;
 
 switch (action) {
-case "deposit":
-// Deposit money
-break;
-case "withdraw":
-// Withdraw money
-break;
-case "checkBalance":
-// Check balance
-break;
+    case "deposit":
+    // Deposit money
+    break;
+    case "withdraw":
+    // Withdraw money
+    break;
+    case "checkBalance":
+    // Check balance
+    break;
 }
+```
 
 ## Try-Catch-Finally Statements
 
@@ -40,10 +42,12 @@ I used try-catch-finally statements to handle errors that might occur. This make
 
 For example, the following try-catch-finally statement is used to deposit money into the account:
 
+```
 try {
-account.deposit(Number(amountInput.value));
-} catch (error) {
-alert(error.message);
-} finally {
-amountInput.value = "";
+    account.deposit(Number(amountInput.value));
+    } catch (error) {
+    alert(error.message);
+    } finally {
+    amountInput.value = "";
 }
+```
