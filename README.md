@@ -6,8 +6,6 @@ This website allows you to manage your bank account. You can deposit money, with
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5227ebf0-d2eb-4198-a054-a8902b1b268f/deploy-status)](https://aguito-bankaccount-management.netlify.app/)
 
-[![Github Pages Status](https://github.com/AgosVenezia/BankAccountManagement/actions/workflows/WORKFLOW-FILE/badge.svg)]
-
 ## :round_pushpin: Instructions
 
 1. Select the action you want to perform from the dropdown menu.
