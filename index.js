@@ -83,5 +83,3 @@ class BankAccount {
       checkBalanceButton.style.display = "inline";
     }
   });
-
-  //balanceOutput.textContent = "Balance: " + account.checkBalance().toString();
